@@ -181,7 +181,16 @@ void MainWindow::on_btn_unsubtopic_click(void)
     QString topic = ui->le_sub_topic->text();
     if(!topic.isEmpty())
     {
-        m_client->unsubscribe(ui->le_sub_topic->text());
+        m_client->unsubscribe(topic);
+        for(int i=0;i<ui->lw_topics->count();i++)
+        {
+            QListWidgetItem *item_sel = ui->lw_topics->item(i);
+            MyWidgetItem *cur_item =dynamic_cast<MyWidgetItem *>(ui->lw_topics->itemWidget(item_sel));
+            if(cur_item->text->text() == topic )
+            {
+                ui->lw_topics->takeItem(i);
+            }
+        }
     }
 
 
