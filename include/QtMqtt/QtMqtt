@@ -1,0 +1,11 @@
+#ifndef QT_QTMQTT_MODULE_H
+#define QT_QTMQTT_MODULE_H
+#include <QtMqtt/QtMqttDepends>
+#include "qmqttglobal.h"
+#include "qmqttclient.h"
+#include "qmqttmessage.h"
+#include "qmqttsubscription.h"
+#include "qmqtttopicfilter.h"
+#include "qmqtttopicname.h"
+#include "qtmqttversion.h"
+#endif
